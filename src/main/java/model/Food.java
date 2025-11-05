@@ -1,0 +1,33 @@
+package model;
+
+
+import static model.constants.Discount.discountForAll;
+
+public abstract class Food implements Discountable {
+    protected Integer amount;
+    protected Double price;
+    protected Boolean isVegetarian;
+
+    protected Food(Integer amount, Double price, boolean isVegetarian) {
+        this.amount = amount;
+        this.price = price;
+        this.isVegetarian = isVegetarian;
+    }
+
+    @Override
+    public Double getDiscount() {
+        return discountForAll;
+    }
+    public Integer getAmount() {
+        return amount;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public Boolean getVegetarian() {
+        return isVegetarian;
+    }
+}
+
