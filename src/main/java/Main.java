@@ -3,14 +3,13 @@ import model.Food;
 import model.Meat;
 import service.ShoppingCart;
 
-import static model.constants.Colour.colourRed;
-import static model.constants.Colour.colourGreen;
+import static model.constants.Colour.*;
 
 public class Main {
     public static void main(String[] args) {
         Food meat = new Meat(5, 100.0);
-        Food redApple = new Apple(10, 50.0, colourRed);
-        Food greenApple = new Apple(8, 60.0, colourGreen);
+        Food redApple = new Apple(10, 50.0, COLOUR_RED);
+        Food greenApple = new Apple(8, 60.0, COLOUR_GREEN);
 
         Food[] foods = {meat, redApple, greenApple};
 

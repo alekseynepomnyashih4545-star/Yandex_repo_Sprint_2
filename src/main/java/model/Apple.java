@@ -2,7 +2,7 @@ package model;
 
 import java.util.Objects;
 
-import static model.constants.Colour.colourRed;
+import static model.constants.Colour.COLOUR_RED;
 import static model.constants.Discount.discountForAll;
 import static model.constants.Discount.discountForRedApple;
 
@@ -15,7 +15,7 @@ public class Apple extends Food {
     }
     @Override
     public Double getDiscount() {
-        return Objects.equals(colour, colourRed) ?
+        return Objects.equals(colour, COLOUR_RED) ?
                 discountForRedApple : discountForAll;
     }
 }
